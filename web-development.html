@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development - My Website</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional custom styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff; /* White text color */
+            background-color: #1a1a1a; /* Darker grey background */
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff; /* White heading color */
+        }
+
+        a {
+            color: #3b82f6; /* Blue link color */
+        }
+
+        a:hover {
+            color: #2563eb; /* Darker blue on hover */
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div>
+                    <a href="webpage.html" class="text-2xl font-semibold">My Website</a>
+                </div>
+
+                <!-- Menu Items -->
+                <div>
+                    <ul class="flex space-x-4">
+                        <li><a href="webpage.html" class="hover:text-gray-300">Home</a></li>
+                        <li><a href="#" class="hover:text-gray-300">About</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Services</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="content">
+            <section class="section">
+                <h1 class="text-4xl font-bold mb-4">Web Development</h1>
+                <p class="text-lg mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nec purus vitae
+                    nisl molestie tincidunt. Nulla facilisi. Nullam id lacus euismod, sodales arcu eget, viverra
+                    ligula.</p>
+                <p class="text-lg mb-4">Pellentesque fermentum nulla id urna varius, non efficitur dui vestibulum.
+                    Donec nec dolor ullamcorper, tempor dui id, vehicula ex. Nullam rutrum lobortis varius.</p>
+                <p class="text-lg">Etiam convallis massa sed velit suscipit, nec pharetra lorem congue. Quisque pretium
+                    augue nec libero malesuada tincidunt. Nam auctor mauris euismod sem convallis sollicitudin.</p>
+            </section>
+
+            <section class="section">
+                <h2 class="text-3xl font-bold mb-4">Latest Trends in Web Development</h2>
+                <p class="text-lg mb-4">Nullam nec elit at ex volutpat consectetur vel sed ex. Cras eget semper eros,
+                    eget sodales sapien. Phasellus ullamcorper eleifend fermentum.</p>
+                <p class="text-lg mb-4">Mauris tristique scelerisque purus. Morbi suscipit, nulla sed lacinia dapibus,
+                    sem nibh ultricies ligula, sed viverra libero libero et arcu.</p>
+                <p class="text-lg">Integer at est quis felis rhoncus gravida. Proin sit amet ultrices velit. Fusce nec
+                    arcu nunc.</p>
+            </section>
+
+            <section class="section">
+                <h2 class="text-3xl font-bold mb-4">Tools and Technologies</h2>
+                <p class="text-lg mb-4">Curabitur sit amet risus gravida, tincidunt quam non, dapibus orci. Nam id
+                    feugiat odio. Morbi consequat vestibulum quam.</p>
+                <p class="text-lg mb-4">Fusce accumsan, nisi sit amet tincidunt ultricies, dui nisl varius elit, at
+                    bibendum nisi tortor in justo. Donec posuere et nulla a varius.</p>
+                <p class="text-lg">Nunc ultricies vitae sem ac elementum. Vivamus auctor sapien et libero lobortis, at
+                    sodales enim suscipit. Cras pellentesque imperdiet viverra.</p>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

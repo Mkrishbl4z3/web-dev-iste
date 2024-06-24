@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Web Page with Tailwind CSS</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Additional custom styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff; /* White text color */
+            background-color: #1a1a1a; /* Darker grey background */
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff; /* White heading color */
+        }
+
+        a {
+            color: #3b82f6; /* Blue link color */
+        }
+
+        a:hover {
+            color: #2563eb; /* Darker blue on hover */
+        }
+
+        .card {
+            background-color: #2d2d2d; /* Greyish card background */
+        }
+
+        .card.expanded {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+
+        .card .text-white {
+            color: #ffffff; /* White text color inside cards */
+        }
+
+        .contact-info {
+            position: absolute;
+            top: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            width: max-content;
+            background-color: #2d2d2d;
+            color: #cbd5e0;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: none;
+        }
+
+        .dropdown.active + .contact-info {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div>
+                    <a href="#" class="text-2xl font-semibold">My Website</a>
+                </div>
+
+                <!-- Menu (Responsive) -->
+                <div class="md:hidden">
+                    <!-- Mobile menu button -->
+                    <button id="mobileMenuBtn"
+                        class="text-gray-300 hover:text-white focus:outline-none focus:text-white">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Menu Items (Hidden on Mobile) -->
+                <div class="hidden md:block">
+                    <ul class="flex space-x-4">
+                        <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                        <li><a href="#" class="hover:text-gray-300">About</a></li>
+                        <li><a href="#" class="hover:text-gray-300">Services</a></li>
+                        <li class="relative">
+                            <a href="#" class="hover:text-gray-300 dropdown">Contact</a>
+                            <div class="contact-info absolute mt-2 py-2 w-48 bg-gray-800 rounded-lg shadow-xl text-sm">
+                                <p class="block px-4 py-2 text-gray-300">Contact Info:</p>
+                                <p class="block px-4 py-2 text-gray-300">Phone: +123456789</p>
+                                <p class="block px-4 py-2 text-gray-300">Email: contact@example.com</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Responsive Mobile Menu -->
+        <div id="mobileMenu"
+            class="md:hidden hidden bg-gray-800 text-white py-2 px-4 mt-2 rounded-lg space-y-1">
+            <a href="#" class="block hover:text-gray-300">Home</a>
+            <a href="#" class="block hover:text-gray-300">About</a>
+            <a href="#" class="block hover:text-gray-300">Services</a>
+            <a href="#" class="block hover:text-gray-300">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-teal-500 to-cyan-600 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold mb-2">Welcome to My Professional Website</h1>
+            <p class="text-lg text-gray-200 mb-4">Explore and Learn with Us!</p>
+            <a href="#"
+                class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg shadow-lg transition duration-300">Get
+                Started</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- Cards Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div
+                class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300 flex flex-col justify-between card">
+                <div class="card-content">
+                    <h2 class="text-xl font-semibold mb-2">Web Development</h2>
+                    <p class="text-gray-700 leading-relaxed text-white">
+                        Learn about the latest web development trends and technologies.
+                    </p>
+                </div>
+                <a href="web-development.html" class="mt-4 text-blue-600 hover:text-blue-700">Read more &rarr;</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300 flex flex-col justify-between card">
+                <div class="card-content">
+                    <h2 class="text-xl font-semibold mb-2">Graphic Design</h2>
+                    <p class="text-gray-700 leading-relaxed text-white">
+                        Explore the world of graphic design and visual communication.
+                    </p>
+                </div>
+                <a href="graphic-design.html" class="mt-4 text-blue-600 hover:text-blue-700">Read more &rarr;</a>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition duration-300 flex flex-col justify-between card">
+                <div class="card-content">
+                    <h2 class="text-xl font-semibold mb-2">Digital Marketing</h2>
+                    <p class="text-gray-700 leading-relaxed text-white">
+                        Discover effective strategies for digital marketing campaigns.
+                    </p>
+                </div>
+                <a href="digital-marketing.html" class="mt-4 text-blue-600 hover:text-blue-700">Read more &rarr;</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
